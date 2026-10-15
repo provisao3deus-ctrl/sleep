@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Better Sleep After 30 | Sleep &amp; Energy</title>
+<meta name="description" content="Three calm evening habits you can try tonight for better sleep and recovery after 30, a free 7-habit checklist, and one supplement option explained honestly.">
+<meta name="theme-color" content="#F6F1EA">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232F4A3A'/%3E%3Cpath d='M7 21a9 9 0 0 1 18 0z' fill='%23C8664B'/%3E%3Crect x='4' y='21' width='24' height='2' fill='%23F6F1EA'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&amp;family=Newsreader:opsz,wght@6..72,400..600&amp;display=swap">
+<style>
+  /* Tokens: palette fixed by the brand brief */
+  :root {
+    --sand: #F6F1EA;
+    --sand-deep: #ECE3D6;
+    --forest: #2F4A3A;
+    --forest-deep: #263D30;
+    --terracotta: #C8664B;
+    --terracotta-ink: #9A4630; /* darker terracotta for small text (AA on sand) */
+    --dusk: #7C5842;           /* halfway between terracotta and forest */
+    --ink: #2B2B2B;
+    --ink-soft: #4D4943;
+
+    --serif: "Newsreader", Georgia, "Iowan Old Style", "Noto Serif", serif;
+    --sans: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+    --measure: 38rem;
+    --gutter: 1rem;
+    --sun: clamp(132px, 24vw, 248px);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--sand);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+  h1, h2, h3 {
+    font-family: var(--serif);
+    color: var(--forest);
+    font-weight: 500;
+    margin: 0;
+  }
+  p { margin: 0; }
+  a { color: inherit; }
+  :focus-visible {
+    outline: 3px solid var(--terracotta);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .wrap {
+    max-width: calc(var(--measure) + 2 * var(--gutter));
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  /* Hero: headline over a setting sun */
+  .hero { padding-top: 1.5rem; }
+  .brand {
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    color: var(--forest);
+    letter-spacing: 0.01em;
+  }
+  .hero h1 {
+    margin-top: 2.25rem;
+    font-size: clamp(2.375rem, 8.4vw, 4rem);
+    line-height: 1.06;
+    letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 72;
+    max-width: 15ch;
+  }
+  .lede {
+    margin-top: 1.25rem;
+    font-size: 1.1875rem;
+    color: var(--ink-soft);
+    max-width: 32rem;
+  }
+  .horizon {
+    position: relative;
+    height: calc(var(--sun) / 2 + 1.5rem);
+    margin-top: 1.5rem;
+    overflow: hidden;
+    border-bottom: 2px solid var(--forest);
+  }
+  .sun {
+    position: absolute;
+    right: clamp(1.25rem, 14vw, 16rem);
+    bottom: 0;
+    width: var(--sun);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--terracotta);
+    transform: translateY(50%);
+    animation: set 2.6s cubic-bezier(.25, .6, .3, 1) both;
+  }
+  @keyframes set {
+    from { transform: translateY(32%); }
+    to   { transform: translateY(50%); }
+  }
+
+  /* Tonight: the evening as a timeline, from sunset to night */
+  .tonight { padding-block: 3rem 3.5rem; }
+  .tonight h2, .checklist h2, .option h2 {
+    font-size: clamp(1.875rem, 5.6vw, 2.5rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    font-variation-settings: "opsz" 48;
+  }
+  .intro { margin-top: 0.75rem; color: var(--ink-soft); }
+
+  .evening {
+    list-style: none;
+    margin: 2.25rem 0 0;
+    padding: 0 0 0 2.25rem;
+    position: relative;
+  }
+  .evening::before {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: linear-gradient(var(--terracotta), var(--dusk), var(--forest));
+  }
+  .step { position: relative; }
+  .step + .step { margin-top: 2.25rem; }
+  .step::before {
+    content: "";
+    position: absolute;
+    left: -2.25rem;
+    top: 0.3rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-left: calc(0.5rem + 1px - 0.5625rem);
+    border-radius: 50%;
+    background: var(--marker);
+    box-shadow: 0 0 0 4px var(--sand);
+  }
+  .step:nth-child(1) { --marker: var(--terracotta); }
+  .step:nth-child(2) { --marker: var(--dusk); }
+  .step:nth-child(3) { --marker: var(--forest); }
+  .when {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--terracotta-ink);
+  }
+  .step:nth-child(2) .when { color: var(--dusk); }
+  .step:nth-child(3) .when { color: var(--forest); }
+  .step h3 {
+    margin-top: 0.25rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-variation-settings: "opsz" 28;
+  }
+  .step h3 + p { margin-top: 0.5rem; }
+  .step p + p { margin-top: 0.625rem; }
+
+  /* Checklist: the night block */
+  .checklist {
+    background: var(--forest);
+    color: var(--sand);
+    padding-block: 3rem 3.25rem;
+  }
+  .checklist h2 { color: var(--sand); }
+  .checklist p { margin-top: 0.75rem; max-width: 32rem; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+  }
+  .btn-sand { background: var(--sand); color: var(--forest); margin-top: 1.5rem; }
+  .btn-sand:hover { background: #fff; }
+  .btn-sand:focus-visible { outline-color: var(--sand); }
+  .btn-forest { background: var(--forest); color: var(--sand); }
+  .btn-forest:hover { background: var(--forest-deep); }
+
+  /* One more option: plain and honest */
+  .option { padding-block: 3rem 3.5rem; }
+  .option-box {
+    background: var(--sand-deep);
+    border-radius: 14px;
+    padding: 1.75rem 1.25rem 1.5rem;
+  }
+  .option-box h2 + p { margin-top: 0.875rem; }
+  .option-box p + p { margin-top: 0.75rem; }
+  .terms { color: var(--ink); }
+  .cta-row {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.625rem;
+  }
+  .disclosure {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer {
+    border-top: 1px solid rgba(47, 74, 58, 0.25);
+    padding-block: 2rem 2.5rem;
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+  }
+  .footer .brand { margin-bottom: 0.75rem; }
+  .footer p + p { margin-top: 0.5rem; }
+
+  @media (min-width: 40rem) {
+    :root { --gutter: 1.5rem; }
+    .hero { padding-top: 2.25rem; }
+    .hero h1 { margin-top: 3.5rem; }
+    .tonight { padding-block: 4.5rem 5rem; }
+    .checklist { padding-block: 4rem 4.25rem; }
+    .option { padding-block: 4.5rem 5rem; }
+    .option-box { padding: 2.25rem 2.25rem 2rem; }
+    .cta-row { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; }
+    .cta-row .btn { flex: none; white-space: nowrap; }
+    .disclosure { flex: 1 1 13rem; text-align: left; text-wrap: balance; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sun { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="brand">Sleep &amp; Energy | Women 30+</p>
+    <h1>Better sleep and recovery after&nbsp;30 begin with your evening.</h1>
+    <p class="lede">Hormones, stress and busy days can all change how you sleep. A few calm habits may help you wind down, rest well and wake up with more energy.</p>
+  </div>
+  <div class="horizon" aria-hidden="true"><span class="sun"></span></div>
+</header>
+
+<main>
+  <section class="tonight" aria-labelledby="tonight-title">
+    <div class="wrap">
+      <h2 id="tonight-title">3 things you can try tonight</h2>
+      <p class="intro">No new gear and no big overhaul. Pick one, try it for a week, and see how you feel.</p>
+
+      <ol class="evening">
+        <li class="step">
+          <p class="when">With dinner</p>
+          <h3>Add a few magnesium-rich foods</h3>
+          <p>Surveys suggest many US adults get less magnesium from food than recommended. Easy sources: pumpkin seeds, spinach, almonds and black beans.</p>
+          <p>Toss pumpkin seeds on a salad, stir spinach into pasta or soup, or build a bowl around black beans. Almonds make an easy evening snack.</p>
+        </li>
+        <li class="step">
+          <p class="when">1–2 hours before bed</p>
+          <h3>Dim the lights and dial down screens</h3>
+          <p>Bright light late in the evening can make it harder to feel sleepy. Switch to lamps, lower your screen brightness, and if you can, charge your phone outside the bedroom.</p>
+        </li>
+        <li class="step">
+          <p class="when">The last 30 minutes</p>
+          <h3>Wind down the same way each night</h3>
+          <p>A short routine you repeat every night can become a signal that the day is done. Keep it simple: a few minutes of gentle stretching, a warm shower, a few pages of a paper book. Same order, low lights.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="checklist" aria-labelledby="checklist-title">
+    <div class="wrap">
+      <h2 id="checklist-title">Get the free 7-habit checklist</h2>
+      <p>Seven small habits for calmer evenings and steadier energy, in one simple checklist. It’s free.</p>
+      <a class="btn btn-sand" href="sleep-recovery-reset.pdf" download>Get the free checklist</a>
+    </div>
+  </section>
+
+  <section class="option" aria-labelledby="option-title">
+    <div class="wrap">
+      <div class="option-box">
+        <h2 id="option-title">One more option</h2>
+        <p>Some women also add a magnesium supplement to their evening routine. The one this account points to is Magnesium Breakthrough by BIOptimizers.</p>
+        <p>It is one option, not a cure, and results vary from person to person.</p>
+        <p class="terms"><strong>Before you order:</strong> it is sold as a subscription by default. Check the price, delivery schedule and how to cancel on their page.</p>
+        <p>If you are pregnant, nursing or take medication, talk to your doctor first.</p>
+        <div class="cta-row">
+          <a class="btn btn-forest" href="https://hop.clickbank.net/?affiliate=brazartti&amp;vendor=MGBREAK&amp;tid=bridge" rel="sponsored noopener" aria-describedby="affiliate-note">See Magnesium Breakthrough</a>
+          <p class="disclosure" id="affiliate-note">Affiliate link — I earn a commission</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="brand">Sleep &amp; Energy | Women 30+</p>
+    <p>Educational content, not medical advice. Talk to your doctor before changing your routine or taking supplements, especially if you are pregnant, nursing, or take medication.</p>
+    <p>As an affiliate, I earn from qualifying purchases.</p>
+    <p><a href="https://docs.google.com/document/d/e/2PACX-1vSEwN6G2bzCTeliBpnVImy-sZ0bZghpfqSILT5fYaNj_jx7HepT7S679UaxC4hcxgs5Us5N4vR7ijd7/pub">Privacy policy</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
