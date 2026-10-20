@@ -3,8 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Better Sleep After 30 | Sleep &amp; Energy</title>
-<meta name="description" content="Three calm evening habits you can try tonight for better sleep and recovery after 30, a free 7-habit checklist, and one supplement option explained honestly.">
+<title>The Sleep &amp; Recovery Reset | Sleep &amp; Energy</title>
+<meta name="description" content="A free 7-habit guide for women 30+ who feel tired all day and wired at night. Three calm things to try tonight, and one supplement option explained honestly.">
+<meta property="og:title" content="The Sleep & Recovery Reset (free guide)">
+<meta property="og:description" content="7 small evening habits for women 30+. Free PDF, no sign-up.">
+<meta property="og:type" content="website">
 <meta name="theme-color" content="#F6F1EA">
 <meta name="color-scheme" content="light">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232F4A3A'/%3E%3Cpath d='M7 21a9 9 0 0 1 18 0z' fill='%23C8664B'/%3E%3Crect x='4' y='21' width='24' height='2' fill='%23F6F1EA'/%3E%3C/svg%3E">
@@ -12,19 +15,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&amp;family=Newsreader:opsz,wght@6..72,400..600&amp;display=swap">
 <style>
-  /* Tokens: palette fixed by the brand brief */
+  /* Cores da conta no Instagram (as mesmas dos carrosséis e stories) */
   :root {
     --sand: #F6F1EA;
     --sand-deep: #ECE3D6;
     --forest: #2F4A3A;
-    --forest-deep: #263D30;
+    --forest-deep: #22382B;
     --terracotta: #C8664B;
-    --terracotta-ink: #9A4630; /* darker terracotta for small text (AA on sand) */
-    --dusk: #7C5842;           /* halfway between terracotta and forest */
+    --terracotta-ink: #9A4630;
+    --dusk: #7C5842;
+    --moon: #E9DFC9;
     --ink: #2B2B2B;
     --ink-soft: #4D4943;
 
-    --serif: "Newsreader", Georgia, "Iowan Old Style", "Noto Serif", serif;
+    --serif: "Newsreader", Georgia, "Iowan Old Style", serif;
     --sans: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
     --measure: 38rem;
@@ -43,74 +47,13 @@
     line-height: 1.6;
     overflow-wrap: break-word;
   }
-  h1, h2, h3 {
-    font-family: var(--serif);
-    color: var(--forest);
-    font-weight: 500;
-    margin: 0;
-  }
-  p { margin: 0; }
+  h1, h2, h3 { font-family: var(--serif); color: var(--forest); font-weight: 500; margin: 0; }
+  p, ul, ol { margin: 0; }
   a { color: inherit; }
-  :focus-visible {
-    outline: 3px solid var(--terracotta);
-    outline-offset: 3px;
-    border-radius: 4px;
-  }
+  :focus-visible { outline: 3px solid var(--terracotta); outline-offset: 3px; border-radius: 4px; }
 
-  .wrap {
-    max-width: calc(var(--measure) + 2 * var(--gutter));
-    margin-inline: auto;
-    padding-inline: var(--gutter);
-  }
-
-  /* Hero: headline over a setting sun */
-  .hero { padding-top: 1.5rem; }
-  .brand {
-    font-family: var(--serif);
-    font-size: 1.0625rem;
-    color: var(--forest);
-    letter-spacing: 0.01em;
-  }
-  .hero h1 {
-    margin-top: 2.25rem;
-    font-size: clamp(2.375rem, 8.4vw, 4rem);
-    line-height: 1.06;
-    letter-spacing: -0.015em;
-    font-variation-settings: "opsz" 72;
-    max-width: 15ch;
-  }
-  .lede {
-    margin-top: 1.25rem;
-    font-size: 1.1875rem;
-    color: var(--ink-soft);
-    max-width: 32rem;
-  }
-  .horizon {
-    position: relative;
-    height: calc(var(--sun) / 2 + 1.5rem);
-    margin-top: 1.5rem;
-    overflow: hidden;
-    border-bottom: 2px solid var(--forest);
-  }
-  .sun {
-    position: absolute;
-    right: clamp(1.25rem, 14vw, 16rem);
-    bottom: 0;
-    width: var(--sun);
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: var(--terracotta);
-    transform: translateY(50%);
-    animation: set 2.6s cubic-bezier(.25, .6, .3, 1) both;
-  }
-  @keyframes set {
-    from { transform: translateY(32%); }
-    to   { transform: translateY(50%); }
-  }
-
-  /* Tonight: the evening as a timeline, from sunset to night */
-  .tonight { padding-block: 3rem 3.5rem; }
-  .tonight h2, .checklist h2, .option h2 {
+  .wrap { max-width: calc(var(--measure) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+  section h2 {
     font-size: clamp(1.875rem, 5.6vw, 2.5rem);
     line-height: 1.12;
     letter-spacing: -0.01em;
@@ -118,133 +61,168 @@
   }
   .intro { margin-top: 0.75rem; color: var(--ink-soft); }
 
-  .evening {
-    list-style: none;
-    margin: 2.25rem 0 0;
-    padding: 0 0 0 2.25rem;
-    position: relative;
+  /* Botões */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 3.25rem; padding: 0.75rem 1.5rem; border-radius: 999px;
+    font-family: var(--sans); font-weight: 700; font-size: 1.0625rem; line-height: 1.25;
+    text-align: center; text-decoration: none;
   }
+  .btn-terra { background: var(--terracotta-ink); color: #fff; }
+  .btn-terra:hover { background: #823A27; }
+  .btn-sand { background: var(--sand); color: var(--forest); }
+  .btn-sand:hover { background: #fff; }
+  .btn-sand:focus-visible { outline-color: var(--sand); }
+  .btn-forest { background: var(--forest); color: var(--sand); }
+  .btn-forest:hover { background: var(--forest-deep); }
+  .btn-note { font-size: 0.9375rem; color: var(--ink-soft); }
+
+  /* Topo: título sobre o sol se pondo */
+  .hero { padding-top: 1.5rem; }
+  .brand { font-family: var(--serif); font-size: 1.0625rem; color: var(--forest); }
+  .hero h1 {
+    margin-top: 2rem;
+    font-size: clamp(2.375rem, 8.4vw, 4rem);
+    line-height: 1.06;
+    letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 72;
+    max-width: 14ch;
+  }
+  .lede { margin-top: 1.25rem; font-size: 1.1875rem; color: var(--ink-soft); max-width: 32rem; }
+  .hero-cta { margin-top: 1.75rem; display: flex; flex-direction: column; align-items: flex-start; gap: 0.625rem; }
+  .horizon {
+    position: relative; height: calc(var(--sun) / 2 + 1.5rem); margin-top: 2rem;
+    overflow: hidden; border-bottom: 2px solid var(--forest);
+  }
+  .sun {
+    position: absolute; right: clamp(1.25rem, 14vw, 16rem); bottom: 0;
+    width: var(--sun); aspect-ratio: 1; border-radius: 50%;
+    background: var(--terracotta); transform: translateY(50%);
+    animation: set 2.6s cubic-bezier(.25, .6, .3, 1) both;
+  }
+  @keyframes set { from { transform: translateY(32%); } to { transform: translateY(50%); } }
+
+  /* "Sound familiar?": a noite dela, contada pelo relógio */
+  .night { background: var(--forest-deep); color: var(--moon); padding-block: 3rem 3.5rem; }
+  .night h2 { color: var(--sand); }
+  .clock { list-style: none; padding: 0; margin-top: 2rem; }
+  .clock li {
+    display: grid; grid-template-columns: 6.25rem 1fr; gap: 0 1rem;
+    padding-block: 1.125rem; border-top: 1px solid rgba(233, 223, 201, 0.18);
+  }
+  .clock li:last-child { border-bottom: 1px solid rgba(233, 223, 201, 0.18); }
+  .clock time {
+    font-family: var(--serif); font-size: 1.875rem; line-height: 1.1;
+    color: var(--sand); font-variant-numeric: lining-nums tabular-nums;
+    font-variation-settings: "opsz" 36;
+  }
+  .clock time small { font-size: 0.55em; margin-left: 0.15em; color: var(--moon); }
+  .clock li:nth-child(3) time { color: #E8987F; } /* 3:07, a hora que ela mais conhece */
+  .clock p { align-self: center; }
+  .night .close { margin-top: 1.75rem; color: var(--sand); max-width: 32rem; }
+
+  /* 3 coisas para hoje: linha do fim da tarde até a noite */
+  .tonight { padding-block: 3rem 3.5rem; }
+  .evening { list-style: none; margin: 2.25rem 0 0; padding: 0 0 0 2.25rem; position: relative; }
   .evening::before {
-    content: "";
-    position: absolute;
-    left: 0.5rem;
-    top: 0.5rem;
-    bottom: 0.5rem;
-    width: 2px;
+    content: ""; position: absolute; left: 0.5rem; top: 0.5rem; bottom: 0.5rem; width: 2px;
     background: linear-gradient(var(--terracotta), var(--dusk), var(--forest));
   }
   .step { position: relative; }
   .step + .step { margin-top: 2.25rem; }
   .step::before {
-    content: "";
-    position: absolute;
-    left: -2.25rem;
-    top: 0.3rem;
-    width: 1.125rem;
-    height: 1.125rem;
-    margin-left: calc(0.5rem + 1px - 0.5625rem);
-    border-radius: 50%;
-    background: var(--marker);
-    box-shadow: 0 0 0 4px var(--sand);
+    content: ""; position: absolute; left: -2.25rem; top: 0.3rem;
+    width: 1.125rem; height: 1.125rem; margin-left: calc(0.5rem + 1px - 0.5625rem);
+    border-radius: 50%; background: var(--marker); box-shadow: 0 0 0 4px var(--sand);
   }
   .step:nth-child(1) { --marker: var(--terracotta); }
   .step:nth-child(2) { --marker: var(--dusk); }
   .step:nth-child(3) { --marker: var(--forest); }
-  .when {
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--terracotta-ink);
-  }
+  .when { font-weight: 700; font-size: 1rem; color: var(--terracotta-ink); }
   .step:nth-child(2) .when { color: var(--dusk); }
   .step:nth-child(3) .when { color: var(--forest); }
-  .step h3 {
-    margin-top: 0.25rem;
-    font-size: 1.5rem;
-    line-height: 1.2;
-    font-variation-settings: "opsz" 28;
-  }
+  .step h3 { margin-top: 0.25rem; font-size: 1.5rem; line-height: 1.2; font-variation-settings: "opsz" 28; }
   .step h3 + p { margin-top: 0.5rem; }
-  .step p + p { margin-top: 0.625rem; }
 
-  /* Checklist: the night block */
-  .checklist {
-    background: var(--forest);
-    color: var(--sand);
-    padding-block: 3rem 3.25rem;
+  /* O guia grátis: a lista de verdade, para marcar */
+  .guide { background: var(--forest); color: var(--sand); padding-block: 3rem 3.5rem; }
+  .guide h2 { color: var(--sand); }
+  .guide .intro { color: var(--moon); }
+  .habits { list-style: none; padding: 0; margin-top: 1.75rem; }
+  .habits li + li { margin-top: 0.25rem; }
+  .habits label {
+    display: flex; gap: 0.875rem; align-items: flex-start;
+    padding: 0.625rem 0.25rem; border-radius: 8px; cursor: pointer;
   }
-  .checklist h2 { color: var(--sand); }
-  .checklist p { margin-top: 0.75rem; max-width: 32rem; }
-
-  /* Buttons */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 3.25rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 999px;
-    font-family: var(--sans);
-    font-weight: 700;
-    font-size: 1.0625rem;
-    line-height: 1.25;
-    text-align: center;
-    text-decoration: none;
+  .habits label:hover { background: rgba(246, 241, 234, 0.06); }
+  .habits input {
+    appearance: none; flex: none; width: 1.375rem; height: 1.375rem; margin: 0.15rem 0 0;
+    border: 2px solid var(--moon); border-radius: 5px; display: grid; place-content: center; cursor: pointer;
   }
-  .btn-sand { background: var(--sand); color: var(--forest); margin-top: 1.5rem; }
-  .btn-sand:hover { background: #fff; }
-  .btn-sand:focus-visible { outline-color: var(--sand); }
-  .btn-forest { background: var(--forest); color: var(--sand); }
-  .btn-forest:hover { background: var(--forest-deep); }
+  .habits input::before {
+    content: ""; width: 0.7rem; height: 0.4rem; margin-top: -0.15rem;
+    border-left: 3px solid var(--forest); border-bottom: 3px solid var(--forest);
+    transform: rotate(-45deg) scale(0); transition: transform 0.15s ease-out;
+  }
+  .habits input:checked { background: var(--sand); border-color: var(--sand); }
+  .habits input:checked::before { transform: rotate(-45deg) scale(1); }
+  .habits input:focus-visible { outline: 3px solid var(--terracotta); outline-offset: 2px; }
+  .habits input:checked + span { color: var(--moon); }
+  .habits span strong { display: block; font-weight: 700; }
+  .guide-cta { margin-top: 2rem; display: flex; flex-direction: column; align-items: flex-start; gap: 0.625rem; }
+  .guide .btn-note { color: var(--moon); }
 
-  /* One more option: plain and honest */
+  /* Mais uma opção: simples e honesta */
   .option { padding-block: 3rem 3.5rem; }
-  .option-box {
-    background: var(--sand-deep);
-    border-radius: 14px;
-    padding: 1.75rem 1.25rem 1.5rem;
-  }
+  .option-box { background: var(--sand-deep); border-radius: 14px; padding: 1.75rem 1.25rem 1.5rem; }
   .option-box h2 + p { margin-top: 0.875rem; }
   .option-box p + p { margin-top: 0.75rem; }
-  .terms { color: var(--ink); }
-  .cta-row {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.625rem;
-  }
-  .disclosure {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--ink);
-    text-align: center;
-  }
+  .before { margin-top: 1.25rem; padding-left: 1.25rem; }
+  .before li + li { margin-top: 0.5rem; }
+  .before li::marker { color: var(--terracotta-ink); }
+  .cta-row { margin-top: 1.5rem; display: flex; flex-direction: column; align-items: stretch; gap: 0.625rem; }
+  .disclosure { font-size: 1rem; font-weight: 700; color: var(--ink); text-align: center; }
 
-  /* Footer */
-  .footer {
-    border-top: 1px solid rgba(47, 74, 58, 0.25);
-    padding-block: 2rem 2.5rem;
-    font-size: 0.9375rem;
-    color: var(--ink-soft);
+  /* Perguntas */
+  .faq { padding-bottom: 3.5rem; }
+  .faq h2 { font-size: clamp(1.625rem, 4.6vw, 2rem); }
+  .faq details { border-top: 1px solid rgba(47, 74, 58, 0.25); }
+  .faq details:last-of-type { border-bottom: 1px solid rgba(47, 74, 58, 0.25); }
+  .faq h2 + details { margin-top: 1.25rem; }
+  .faq summary {
+    cursor: pointer; list-style: none; padding: 1rem 2rem 1rem 0; position: relative;
+    font-weight: 700; color: var(--forest);
   }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: "+"; position: absolute; right: 0.25rem; top: 0.85rem;
+    font-family: var(--serif); font-size: 1.5rem; line-height: 1; color: var(--terracotta-ink);
+  }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { padding-bottom: 1.125rem; color: var(--ink-soft); }
+
+  .footer { border-top: 1px solid rgba(47, 74, 58, 0.25); padding-block: 2rem 2.5rem; font-size: 0.9375rem; color: var(--ink-soft); }
   .footer .brand { margin-bottom: 0.75rem; }
   .footer p + p { margin-top: 0.5rem; }
 
   @media (min-width: 40rem) {
     :root { --gutter: 1.5rem; }
     .hero { padding-top: 2.25rem; }
-    .hero h1 { margin-top: 3.5rem; }
-    .tonight { padding-block: 4.5rem 5rem; }
-    .checklist { padding-block: 4rem 4.25rem; }
-    .option { padding-block: 4.5rem 5rem; }
+    .hero h1 { margin-top: 3.25rem; }
+    .hero-cta, .guide-cta { flex-direction: row; align-items: center; gap: 1rem; }
+    .night, .tonight, .guide, .option { padding-block: 4.5rem 5rem; }
+    .clock li { grid-template-columns: 8rem 1fr; }
+    .clock time { font-size: 2.25rem; }
     .option-box { padding: 2.25rem 2.25rem 2rem; }
     .cta-row { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; }
     .cta-row .btn { flex: none; white-space: nowrap; }
-    .disclosure { flex: 1 1 13rem; text-align: left; text-wrap: balance; }
+    .disclosure { flex: 1 1 13rem; text-align: left; }
+    .faq { padding-bottom: 5rem; }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .sun { animation: none; }
+    .habits input::before { transition: none; }
   }
 </style>
 </head>
@@ -253,44 +231,71 @@
 <header class="hero">
   <div class="wrap">
     <p class="brand">Sleep &amp; Energy | Women 30+</p>
-    <h1>Better sleep and recovery after&nbsp;30 begin with your evening.</h1>
-    <p class="lede">Hormones, stress and busy days can all change how you sleep. A few calm habits may help you wind down, rest well and wake up with more energy.</p>
+    <h1>Tired all day, wide awake at night? Start with tonight.</h1>
+    <p class="lede">Your free Sleep &amp; Recovery Reset is ready: seven small evening habits that may help you wind down, rest better and bounce back after busy days.</p>
+    <div class="hero-cta">
+      <a class="btn btn-terra" href="sleep-recovery-reset.pdf" download>Download the free guide</a>
+      <p class="btn-note">PDF, 4 pages. No sign-up.</p>
+    </div>
   </div>
   <div class="horizon" aria-hidden="true"><span class="sun"></span></div>
 </header>
 
 <main>
+  <section class="night" aria-labelledby="night-title">
+    <div class="wrap">
+      <h2 id="night-title">Does your day go a bit like this?</h2>
+      <ol class="clock">
+        <li><time>3:45<small>pm</small></time><p>The afternoon slump hits, so you reach for another coffee.</p></li>
+        <li><time>10:30<small>pm</small></time><p>You’re exhausted, but your mind won’t switch off.</p></li>
+        <li><time>3:07<small>am</small></time><p>Awake again, running through tomorrow’s list.</p></li>
+        <li><time>6:45<small>am</small></time><p>The alarm goes off, and yesterday’s workout is still in your legs.</p></li>
+      </ol>
+      <p class="close">This is really common for women in their 30s, 40s and 50s. Work, stress, training and hormone shifts can all play a part. It doesn’t mean something is wrong with you. Often your evenings just need a little more support.</p>
+    </div>
+  </section>
+
   <section class="tonight" aria-labelledby="tonight-title">
     <div class="wrap">
       <h2 id="tonight-title">3 things you can try tonight</h2>
       <p class="intro">No new gear and no big overhaul. Pick one, try it for a week, and see how you feel.</p>
-
       <ol class="evening">
         <li class="step">
-          <p class="when">With dinner</p>
-          <h3>Add a few magnesium-rich foods</h3>
-          <p>Surveys suggest many US adults get less magnesium from food than recommended. Easy sources: pumpkin seeds, spinach, almonds and black beans.</p>
-          <p>Toss pumpkin seeds on a salad, stir spinach into pasta or soup, or build a bowl around black beans. Almonds make an easy evening snack.</p>
+          <p class="when">After lunch</p>
+          <h3>Set a caffeine cutoff</h3>
+          <p>Research suggests even coffee six hours before bed may cut into your sleep. Try stopping about eight hours before bedtime. Energy drinks, pre-workout and some teas count too.</p>
         </li>
         <li class="step">
-          <p class="when">1–2 hours before bed</p>
+          <p class="when">1 hour before bed</p>
           <h3>Dim the lights and dial down screens</h3>
-          <p>Bright light late in the evening can make it harder to feel sleepy. Switch to lamps, lower your screen brightness, and if you can, charge your phone outside the bedroom.</p>
+          <p>Bright evening light can tell your brain it’s still daytime. Switch to lamps, lower your screen brightness, and charge your phone outside the bedroom if you can.</p>
         </li>
         <li class="step">
-          <p class="when">The last 30 minutes</p>
-          <h3>Wind down the same way each night</h3>
-          <p>A short routine you repeat every night can become a signal that the day is done. Keep it simple: a few minutes of gentle stretching, a warm shower, a few pages of a paper book. Same order, low lights.</p>
+          <p class="when">In bed</p>
+          <h3>Breathe in for 4, out for 6</h3>
+          <p>Slow breathing with a longer exhale may help your body shift into a calmer state. Lights off, phone out of reach, ten slow rounds.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <section class="checklist" aria-labelledby="checklist-title">
+  <section class="guide" aria-labelledby="guide-title">
     <div class="wrap">
-      <h2 id="checklist-title">Get the free 7-habit checklist</h2>
-      <p>Seven small habits for calmer evenings and steadier energy, in one simple checklist. It’s free.</p>
-      <a class="btn btn-sand" href="sleep-recovery-reset.pdf" download>Get the free checklist</a>
+      <h2 id="guide-title">All seven habits in the free guide</h2>
+      <p class="intro">Each one comes with a “try tonight” step. Tick the ones you already do, then pick one new habit for this week.</p>
+      <ul class="habits">
+        <li><label><input type="checkbox" name="h1"><span><strong>Pick a wind-down time and keep it</strong>A phone alarm 45 minutes before bed starts your routine.</span></label></li>
+        <li><label><input type="checkbox" name="h2"><span><strong>Dim the lights in the evening</strong>Lamps on, overhead lights off, one hour before bed.</span></label></li>
+        <li><label><input type="checkbox" name="h3"><span><strong>Eat protein after you train</strong>Yogurt, eggs, tofu or a shake within a couple of hours.</span></label></li>
+        <li><label><input type="checkbox" name="h4"><span><strong>Take a short, easy walk</strong>Ten minutes after dinner. No pace, no tracking.</span></label></li>
+        <li><label><input type="checkbox" name="h5"><span><strong>Set a caffeine cutoff</strong>About eight hours before bed.</span></label></li>
+        <li><label><input type="checkbox" name="h6"><span><strong>Add magnesium-rich foods</strong>Pumpkin seeds, spinach, almonds or black beans.</span></label></li>
+        <li><label><input type="checkbox" name="h7"><span><strong>Keep your room cool and dark</strong>Many people sleep best somewhere around 60–67°F.</span></label></li>
+      </ul>
+      <div class="guide-cta">
+        <a class="btn btn-sand" href="sleep-recovery-reset.pdf" download>Download the free guide</a>
+        <p class="btn-note">Save it to your phone and keep it by the bed.</p>
+      </div>
     </div>
   </section>
 
@@ -298,15 +303,40 @@
     <div class="wrap">
       <div class="option-box">
         <h2 id="option-title">One more option</h2>
-        <p>Some women also add a magnesium supplement to their evening routine. The one this account points to is Magnesium Breakthrough by BIOptimizers.</p>
-        <p>It is one option, not a cure, and results vary from person to person.</p>
-        <p class="terms"><strong>Before you order:</strong> it is sold as a subscription by default. Check the price, delivery schedule and how to cancel on their page.</p>
-        <p>If you are pregnant, nursing or take medication, talk to your doctor first.</p>
+        <p>Food first is a great place to start. Some women also add a magnesium supplement to their evening routine. The one this account points to is Magnesium Breakthrough by BIOptimizers.</p>
+        <p>It’s one option, not a cure, and results vary from person to person.</p>
+        <ul class="before">
+          <li><strong>It’s a subscription by default.</strong> Check the price, delivery schedule and how to cancel on their page before you order.</li>
+          <li>Supplements can interact with some medications. Talk to your doctor first, especially if you’re pregnant or nursing.</li>
+          <li>You don’t need a supplement to try any of the seven habits.</li>
+        </ul>
         <div class="cta-row">
           <a class="btn btn-forest" href="https://hop.clickbank.net/?affiliate=brazartti&amp;vendor=MGBREAK&amp;tid=bridge" rel="sponsored noopener" aria-describedby="affiliate-note">See Magnesium Breakthrough</a>
           <p class="disclosure" id="affiliate-note">Affiliate link — I earn a commission</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <h2 id="faq-title">Questions</h2>
+      <details>
+        <summary>Do I need a supplement for this to work?</summary>
+        <p>No. All seven habits are free and need nothing new. The supplement is an optional extra some women choose, and only you and your doctor can decide if it fits you.</p>
+      </details>
+      <details>
+        <summary>How fast will I notice a difference?</summary>
+        <p>It varies. Pick one habit and give it a week or two before adding the next. Small, steady changes are easier to keep.</p>
+      </details>
+      <details>
+        <summary>When should I talk to a doctor?</summary>
+        <p>If poor sleep has lasted for weeks, gets in the way of your day, or comes with symptoms that worry you, that’s a good reason to check in with your doctor.</p>
+      </details>
+      <details>
+        <summary>Who writes this?</summary>
+        <p>Sleep &amp; Energy is an Instagram account sharing calm, practical habits for women 30+. It’s educational content, not medical advice, and some links earn a commission. They’re always marked.</p>
+      </details>
     </div>
   </section>
 </main>
@@ -320,5 +350,21 @@
   </div>
 </footer>
 
+<script>
+  // Lembra os hábitos marcados só neste aparelho (se o navegador permitir)
+  (function () {
+    var KEY = "reset-habits";
+    var boxes = document.querySelectorAll(".habits input");
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { saved = {}; }
+    boxes.forEach(function (b) {
+      b.checked = !!saved[b.name];
+      b.addEventListener("change", function () {
+        saved[b.name] = b.checked;
+        try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+      });
+    });
+  })();
+</script>
 </body>
 </html>
